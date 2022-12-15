@@ -8,7 +8,6 @@ public class ForExample {
                 System.out.print("*");
             }
             System.out.println();
-
         }
 
     }
