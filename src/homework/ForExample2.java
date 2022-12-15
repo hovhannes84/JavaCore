@@ -6,7 +6,7 @@ public class ForExample2 {
             for (int j = 5; j > i; j--) {
 
 
-                System.out.print("* ");
+                System.out.print("*  ");
             }
 
 
