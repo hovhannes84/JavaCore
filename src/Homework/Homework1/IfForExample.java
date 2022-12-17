@@ -13,6 +13,25 @@ public class IfForExample {
         }
 
 
+        int c = 3, d = 9;
+        for (int i = c; i <= d; i++) {
+            System.out.print(i + " ");
+
+        }
+        System.out.println();
+
+        a = 'a';
+        System.out.println(a);
+
+        if (a == b) {
+            System.out.println("a-ն հավասար է b-ին");
+
+        } else if (a != b) {
+            System.out.println("a-ն հավասար չէ b-ին");
+
+        }
+
+
     }
 
 
