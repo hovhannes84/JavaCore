@@ -2,7 +2,7 @@ package Homework.Homework1;
 
 public class IfForExample {
     public static void main(String[] args) {
-        int a = 15, b = 25;
+        int a = 57, b = 95;
         int max;
 
         if (a > b) {
@@ -20,8 +20,10 @@ public class IfForExample {
         }
         System.out.println();
 
-        a = 'a';
-        System.out.println(a);
+
+
+
+        System.out.println((char)a);
 
         if (a == b) {
             System.out.println("a-ն հավասար է b-ին");
