@@ -63,18 +63,20 @@ public class ArreyUtil {
         for (int i = 0; i < arrey.length; i++) {
             mean = mean + arrey[i];
             sum = sum + arrey[i];
-            last = arrey[i];
+
         }
         mean = mean / arrey.length;
         System.out.println("the arithmetic mean of all the numbers in the array " + mean);
         System.out.println("sum of array elements " + sum);
         System.out.println("the first element of the array " + arrey[0]);
+
+        last = arrey[arrey.length - 1];
         System.out.println("the last element of the array " + last);
 
-        for (int i = 0; i < arrey.length / 2; i++) {
-            middle = arrey[i];
 
-        }
+        middle = arrey[arrey.length / 2];
+
+
         System.out.println("the middle element of the array " + middle);
 
 
