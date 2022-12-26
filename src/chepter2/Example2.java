@@ -1,4 +1,4 @@
-package cheper2;
+package chepter2;
 
 public class Example2 {
     public static void main(String[] args) {

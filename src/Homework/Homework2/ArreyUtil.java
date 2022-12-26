@@ -6,12 +6,12 @@ public class ArreyUtil {
         int[] arrey = {11, 18, 17, 6, 24, 7, 13, 37, 45, 10};
         int max = arrey[0];
         int min = arrey[0];
-        int z = 0;
-        int k = 0;
-        int mij = 0;
-        int b = 0;
-        int m = 0;
-        int v = 0;
+        int pair = 0;
+        int odd = 0;
+        int mean = 0;
+        int sum = 0;
+        int middle = 0;
+        int last = 0;
 
 
         for (int i = 0; i < arrey.length; i++) {
@@ -25,7 +25,7 @@ public class ArreyUtil {
             }
 
         }
-        System.out.println("մասիվի ամենամեծ թիվը " + max);
+        System.out.println("the largest number in the array " + max);
         for (int i = 0; i < arrey.length; i++) {
             if (arrey[i] < min) {
                 min = arrey[i];
@@ -33,67 +33,50 @@ public class ArreyUtil {
 
 
         }
-        System.out.println("մասիվի ամենափոքր թիվը " + min);
+        System.out.println("the smallest number of the fraction" + min);
 
-        for (int i = 1; i < arrey.length; i++) {
+        for (int i = 0; i < arrey.length; i++) {
             if (arrey[i] % 2 == 0) {
+                pair++;
+                System.out.print(arrey[i] + " ");
+            }
+        }
+        System.out.println("all even elements of the array ");
+        System.out.println("number of pairs " + pair);
 
+        for (int i = 0; i < arrey.length; i++) {
+            if (arrey[i] % 2 != 0) {
+                odd++;
                 System.out.print(arrey[i] + " ");
             }
 
         }
-
-        System.out.println("մասիվի բոլոր զույգ էլեմենտները ");
-
-        for (int i = 0; i < arrey.length; i++) {
-            if (arrey[i] % 2 != 0) {
-                System.out.print(arrey[i] + " ");
-            }
-
-        }
-        System.out.println("մասիվի բոլոր կենտ էլեմենտները");
+        System.out.println("all odd elements of the array ");
+        System.out.println("number of odd " + odd);
 
         for (int i = 0; i < arrey.length; i++) {
             if (arrey[i] % 2 == 0) {
-                z++;
+
             }
-
         }
-        System.out.println("զույգերի քանակը " + z);
 
         for (int i = 0; i < arrey.length; i++) {
-            if (arrey[i] % 2 != 0) {
-                k++;
-            }
-
+            mean = mean + arrey[i];
+            sum = sum + arrey[i];
+            last = arrey[i];
         }
-        System.out.println("կենտերի քանակը " + k);
-
-        for (int i = 0; i < arrey.length; i++) {
-            mij = mij + arrey[i];
-
-        }
-        mij = mij / 2;
-        System.out.println("մասիվի բոլոր թվերի միջին թվաբանականը " + mij);
-
-        for (int i = 0; i < arrey.length; i++) {
-            b = b + arrey[i];
-
-        }
-        System.out.println("մասիվի էլեմենտների գումարը " + b);
-        System.out.println("մասիվի առաջին էլեմենտը " + arrey[0]);
+        mean = mean / arrey.length;
+        System.out.println("the arithmetic mean of all the numbers in the array " + mean);
+        System.out.println("sum of array elements " + sum);
+        System.out.println("the first element of the array " + arrey[0]);
+        System.out.println("the last element of the array " + last);
 
         for (int i = 0; i < arrey.length / 2; i++) {
-            m = arrey[i];
+            middle = arrey[i];
 
         }
-        System.out.println("մասիվի մեջտեղի էլեմենտը " + m);
+        System.out.println("the middle element of the array " + middle);
 
-        for (int i = 0; i < arrey.length; i++) {
-            v = arrey[i];
-
-        }
-        System.out.println("մասիվի վերջին էլեմենտը " + v);
 
     }
 }
