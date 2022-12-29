@@ -1,4 +1,4 @@
-package Homework.Homework2;
+package homework.homework2;
 
 public class FigurePainter2 {
 
