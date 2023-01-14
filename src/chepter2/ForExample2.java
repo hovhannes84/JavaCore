@@ -1,4 +1,4 @@
-package homework;
+package chepter2;
 
 public class ForExample2 {
     public static void main(String[] args) {

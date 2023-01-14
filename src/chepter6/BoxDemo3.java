@@ -1,9 +1,10 @@
-package homework6;
+package chepter6;
 
 public class BoxDemo3 {
     public static void main(String[] args) {
-        Box mybox1 = new Box();
-        Box mybox2 = new Box();
+        Box mybox1 = new chepter6.Box();
+        Box mybox2 = new chepter6.Box();
+
         mybox1.width = 10;
         mybox1.height = 20;
         mybox1.depth = 15;
