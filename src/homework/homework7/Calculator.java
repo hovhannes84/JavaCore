@@ -1,31 +1,30 @@
 package homework.homework7;
 
 public class Calculator {
-    int result;
 
+    int result;
     int plus(int x, int y) {
-        result = x + y;
-        return result;
+        return  x + y;
+
     }
 
     int minus(int x, int y) {
-        result = x - y;
-        return result;
+            return x - y;
+
     }
 
     int multiply(int x, int y) {
-        result = x * y;
-        return result;
+        return x * y;
+
     }
 
     int divide(int x, int y) {
         if (y == 0) {
             System.out.println("թիվը 0 ի չի բաժանվում ");
-            result = -1;
-            return result;
+            return -1;
         }
-        result = x / y;
-        return result;
+        return  x / y;
+
     }
 
 }
