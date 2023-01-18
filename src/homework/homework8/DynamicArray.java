@@ -9,14 +9,12 @@ public class DynamicArray {
     //ստուգել եթե մասիվի մեջ տեղ չկա-> կանչել extend()
     //և ավելացնենք
     public void add(int value) {
-
+        array[size++] = value;
         if (size >= array.length - 1) {
             extend();
             array[size++] = value;
-
-        } else {
-            array[size++] = value;
         }
+
     }
 
     //1․ ստեղծել հին մասիվից 10 էլեմենտ ավելի մեծ մասիվ
