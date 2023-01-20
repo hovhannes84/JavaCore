@@ -29,8 +29,8 @@ public class DynamicArrayDemo {
         dinArrey.print();
         System.out.println();
 
-        System.out.print(dinArrey.getByIndex(30) + " ");
-        System.out.println(dinArrey.getByIndex(7));
+        System.out.print(dinArrey.getByIndex(6) + " ");
+        System.out.println(dinArrey.getByIndex(-5));
 
 
     }
