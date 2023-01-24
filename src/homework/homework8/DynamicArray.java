@@ -86,14 +86,13 @@ public class DynamicArray {
 
         }
         size++;
-        int s = size;
-        for (int i = index; i < size; i++) {
-            array[s] = array[s - 1];
-            s--;
+        for (int i = size; i > index; i--) {
+            array[i] = array[i-1];
         }
         array[index] = value;
 
     }
+
 
     //Վերադարձնել true եթե տրված value-ն կա մեր մասիվի մեջ, եթե ոչ false
     public boolean exists(int value) {
