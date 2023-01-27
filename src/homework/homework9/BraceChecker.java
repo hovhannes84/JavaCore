@@ -42,7 +42,7 @@ public class BraceChecker {
                 case ']':
                     b = (char) mystek.pop();
                     if (b != '[') {
-                        System.out.println("Error: opened " + b + " but closed " + c + "at " + i);
+                        System.out.println("Error: opened " + b + " but closed " + c +  "at " + i);
                     }
                     break;
 
