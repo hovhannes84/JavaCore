@@ -13,17 +13,14 @@ public class BraceChecker {
     public void check() {
         Stack mystek = new Stack();
         char b;
-
+        int a=0;
         for (int i = 0; i < text.length(); i++) {
             char c = text.charAt(i);
 
+
             switch (c) {
                 case '(':
-                    mystek.push(c);
-                    break;
                 case '{':
-                    mystek.push(c);
-                    break;
                 case '[':
                     mystek.push(c);
                     break;
@@ -49,8 +46,28 @@ public class BraceChecker {
 
             }
 
-
         }
+        for (int i = 0; i <text.length() ; i++) {
+            char c = text.charAt(i);
+            switch (c){
+                case '(':
+                case '{':
+                case '[':
+                case ')':
+                case '}':
+                case ']':
+                    mystek.push(c);
+                    a++;
+            }
+            if (i == text.length()-1 && a % 2 != 0 ){
+                if (c == '('||c == '{' ||c == '['){
+                    System.out.println( "Error: at " + i + " Opened "  + c + " but not closed. " );
+                }else System.out.println("Error at " + i + " index Closed " + c +" but not open." );
+
+
+            }
+        }
+
 
     }
 
