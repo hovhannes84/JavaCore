@@ -16,7 +16,6 @@ public class Stack {
     }
     int pop(){
         if (tos<0){
-            System.out.println("Cтeк не загружен. ");
             return 0;
         }
         else {
