@@ -3,23 +3,63 @@ package homework.employee;
 import java.util.Objects;
 
 class Employee {
-   private String name;
-   private String surname;
-   private String emplyeeID;
-   private String company;
-   private double salary;
-   private double position;
+    private String name;
+    private String surname;
+    private String emplyeeID;
+    private String company;
+    private double salary;
+    private String position;
+    private boolean active = true;
 
-    public Employee(){
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", emplyeeID='" + emplyeeID + '\'' +
+                ", company='" + company + '\'' +
+                ", salary=" + salary +
+                ", position='" + position + '\'' +
+                ", active=" + active +
+                '}';
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return active == employee.active;
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(active);
+    }
+
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+
+    public Employee() {
 
     }
-    public Employee(String name,String surname,String emplyeeID,String company,double salary,double position){
+
+    public Employee(String name, String surname, String emplyeeID, String company, double salary, String position) {
         this.name = name;
         this.surname = surname;
         this.emplyeeID = emplyeeID;
         this.company = company;
         this.salary = salary;
-        this.position  = position;
+        this.position = position;
     }
 
     public String getName() {
@@ -62,42 +102,12 @@ class Employee {
         this.salary = salary;
     }
 
-    public double getPosition() {
+    public String getPosition() {
         return position;
     }
 
-    public void setPosition(double position) {
+    public void setPosition(String position) {
         this.position = position;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Employee employee = (Employee) o;
-        return salary == employee.salary &&
-                position == employee.position &&
-                Objects.equals(name, employee.name) &&
-                Objects.equals(surname, employee.surname) &&
-                Objects.equals(emplyeeID, employee.emplyeeID) &&
-                Objects.equals(company, employee.company);
-    }
-
-    @Override
-    public int hashCode() {
-
-        return Objects.hash(name, surname, emplyeeID, company, salary, position);
-    }
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", emplyeeID='" + emplyeeID + '\'' +
-                ", company='" + company + '\'' +
-                ", salary=" + salary +
-                ", position=" + position +
-                '}';
     }
 
 
