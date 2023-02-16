@@ -1,8 +1,16 @@
 package homework.employee;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Objects;
 
+
 class Employee {
+    Date date = new Date();
+    SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+
+
     private String name;
     private String surname;
     private String emplyeeID;
@@ -10,33 +18,40 @@ class Employee {
     private double salary;
     private String position;
     private boolean active = true;
+    private String registerDate = sdf.format(date);
+    private String dateOfBirthday;
 
     @Override
     public String toString() {
         return "Employee{" +
-                "name='" + name + '\'' +
+                ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", emplyeeID='" + emplyeeID + '\'' +
                 ", company='" + company + '\'' +
                 ", salary=" + salary +
                 ", position='" + position + '\'' +
                 ", active=" + active +
+                ", registerDate='" + registerDate + '\'' +
+                ", dateOfBirthday='" + dateOfBirthday + '\'' +
+
                 '}';
     }
 
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Employee employee = (Employee) o;
-        return active == employee.active;
+    public String getRegisterDate() {
+        return registerDate;
     }
 
-    @Override
-    public int hashCode() {
+    public void setRegisterDate(String registerDate) {
+        this.registerDate = registerDate;
+    }
 
-        return Objects.hash(active);
+    public SimpleDateFormat getSdf() {
+        return sdf;
+    }
+
+    public void setSdf(SimpleDateFormat sdf) {
+        this.sdf = sdf;
     }
 
 
@@ -49,17 +64,14 @@ class Employee {
     }
 
 
-    public Employee() {
-
-    }
-
-    public Employee(String name, String surname, String emplyeeID, String company, double salary, String position) {
+    public Employee(String name, String surname, String emplyeeID, String company, double salary, String position, String dateOfBirthday) throws ParseException {
         this.name = name;
         this.surname = surname;
         this.emplyeeID = emplyeeID;
         this.company = company;
         this.salary = salary;
         this.position = position;
+        this.dateOfBirthday = dateOfBirthday;
     }
 
     public String getName() {
