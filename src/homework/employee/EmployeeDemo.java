@@ -124,10 +124,11 @@ public class EmployeeDemo {
         System.out.println("Please input employees' position");
         String position = scanner.nextLine();
         System.out.println("Please input date(14/02/2023)");
-        String dateOfBirthday = scanner.nextLine();
-        Date parse = sdf.parse(dateOfBirthday);
+        String dateOfB = scanner.nextLine();
+        Date dateOfBirthday = sdf.parse(dateOfB);
+        Date registerDate = new Date();
 
-        Employee employee = new Employee(name, surname, emplyeeID, company, Double.parseDouble(salary), position,dateOfBirthday);
+        Employee employee = new Employee(name, surname, emplyeeID, company, Double.parseDouble(salary), position,dateOfBirthday,registerDate);
         employeeStorage.add(employee);
         System.out.println("employee is created");
     }

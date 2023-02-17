@@ -8,7 +8,6 @@ import java.util.Objects;
 
 class Employee {
     Date date = new Date();
-    SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
 
 
     private String name;
@@ -18,8 +17,8 @@ class Employee {
     private double salary;
     private String position;
     private boolean active = true;
-    private String registerDate = sdf.format(date);
-    private String dateOfBirthday;
+    private Date registerDate  ;
+    private Date dateOfBirthday;
 
     @Override
     public String toString() {
@@ -38,22 +37,13 @@ class Employee {
     }
 
 
-    public String getRegisterDate() {
+    public Date getRegisterDate() {
         return registerDate;
     }
 
-    public void setRegisterDate(String registerDate) {
+    public void setRegisterDate(Date registerDate) {
         this.registerDate = registerDate;
     }
-
-    public SimpleDateFormat getSdf() {
-        return sdf;
-    }
-
-    public void setSdf(SimpleDateFormat sdf) {
-        this.sdf = sdf;
-    }
-
 
     public boolean isActive() {
         return active;
@@ -64,7 +54,7 @@ class Employee {
     }
 
 
-    public Employee(String name, String surname, String emplyeeID, String company, double salary, String position, String dateOfBirthday) throws ParseException {
+    public Employee(String name, String surname, String emplyeeID, String company, double salary, String position, Date dateOfBirthday,Date registerDate) throws ParseException {
         this.name = name;
         this.surname = surname;
         this.emplyeeID = emplyeeID;
@@ -72,6 +62,7 @@ class Employee {
         this.salary = salary;
         this.position = position;
         this.dateOfBirthday = dateOfBirthday;
+        this.registerDate = registerDate;
     }
 
     public String getName() {
