@@ -1,12 +1,13 @@
-package homework.employee;
+package homework.employee.employee;
+
+import homework.employee.util.DateUtil;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Objects;
 
 
-class Employee {
+public class Employee {
     Date date = new Date();
 
 
@@ -30,8 +31,8 @@ class Employee {
                 ", salary=" + salary +
                 ", position='" + position + '\'' +
                 ", active=" + active +
-                ", registerDate='" + registerDate + '\'' +
-                ", dateOfBirthday='" + dateOfBirthday + '\'' +
+                ", registerDate='" + DateUtil.dateToString(registerDate) + '\'' +
+                ", dateOfBirthday='" + DateUtil.dateToString(dateOfBirthday) + '\'' +
 
                 '}';
     }
@@ -54,15 +55,16 @@ class Employee {
     }
 
 
-    public Employee(String name, String surname, String emplyeeID, String company, double salary, String position, Date dateOfBirthday,Date registerDate) throws ParseException {
+    public Employee(String name, String surname, String emplyeeID, String company, double salary, String position,Date registerDate,Date dateOfBirthday) throws ParseException {
         this.name = name;
         this.surname = surname;
         this.emplyeeID = emplyeeID;
         this.company = company;
         this.salary = salary;
         this.position = position;
-        this.dateOfBirthday = dateOfBirthday;
         this.registerDate = registerDate;
+        this.dateOfBirthday = dateOfBirthday;
+
     }
 
     public String getName() {

@@ -1,5 +1,9 @@
 package homework.employee;
 
+import homework.employee.employee.Employee;
+import homework.employee.storage.EmployeeStorage;
+import homework.employee.util.DateUtil;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -125,10 +129,10 @@ public class EmployeeDemo {
         String position = scanner.nextLine();
         System.out.println("Please input date(14/02/2023)");
         String dateOfB = scanner.nextLine();
-        Date dateOfBirthday = sdf.parse(dateOfB);
+        Date dateOfBirthday = DateUtil.stringToDate(dateOfB);
         Date registerDate = new Date();
 
-        Employee employee = new Employee(name, surname, emplyeeID, company, Double.parseDouble(salary), position,dateOfBirthday,registerDate);
+        Employee employee = new Employee(name, surname, emplyeeID, company, Double.parseDouble(salary),position,registerDate,dateOfBirthday);
         employeeStorage.add(employee);
         System.out.println("employee is created");
     }

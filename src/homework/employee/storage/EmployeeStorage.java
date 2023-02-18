@@ -1,7 +1,9 @@
-package homework.employee;
+package homework.employee.storage;
+
+import homework.employee.employee.Employee;
 
 public class EmployeeStorage {
-    private Employee [] array = new Employee [10];
+    private Employee[] array = new Employee [10];
     private int size = 0;
 
 
