@@ -1,4 +1,4 @@
-package homework.employee.employee;
+package homework.employee.model;
 
 import homework.employee.util.DateUtil;
 
@@ -14,7 +14,7 @@ public class Employee {
     private String name;
     private String surname;
     private String emplyeeID;
-    private String company;
+    private Company company;
     private double salary;
     private String position;
     private boolean active = true;
@@ -55,7 +55,7 @@ public class Employee {
     }
 
 
-    public Employee(String name, String surname, String emplyeeID, String company, double salary, String position,Date registerDate,Date dateOfBirthday) throws ParseException {
+    public Employee(String name, String surname, String emplyeeID, Company company, double salary, String position,Date registerDate,Date dateOfBirthday) throws ParseException {
         this.name = name;
         this.surname = surname;
         this.emplyeeID = emplyeeID;
@@ -91,14 +91,12 @@ public class Employee {
         this.emplyeeID = emplyeeID;
     }
 
-    public String getCompany() {
-        return company;
-    }
-
-    public void setCompany(String company) {
+    public void setCompany(Company company) {
         this.company = company;
     }
-
+    public Company getCompany() {
+        return company;
+    }
     public double getSalary() {
         return salary;
     }

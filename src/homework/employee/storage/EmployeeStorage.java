@@ -1,6 +1,7 @@
 package homework.employee.storage;
 
-import homework.employee.employee.Employee;
+import homework.employee.model.Company;
+import homework.employee.model.Employee;
 
 public class EmployeeStorage {
     private Employee[] array = new Employee [10];
@@ -43,18 +44,18 @@ public class EmployeeStorage {
         return null;
         }
 
-    public void searchCompany(String keyword1){
+    public void searchCompany(Company company){
         boolean found = false;
         for (int i = 0; i <size ; i++) {
             Employee employee = array[i];
-            if (employee.getCompany().contains(keyword1)){
+            if (employee.getCompany().equals(company)){
                 found = true;
                 System.out.println(employee);
             }
 
         }
         if (!found){
-            System.out.println("employee with " + keyword1 + " does not exists ");
+            System.out.println("employee with " + company + " does not exists ");
         }
     }
     public void  rang (double min,double max){
