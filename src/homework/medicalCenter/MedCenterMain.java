@@ -18,11 +18,11 @@ public class MedCenterMain implements Comands {
     public static void main(String[] args) {
         boolean isRun = true;
 
-        while (isRun){
+        while (isRun) {
             Comands.printComanands();
             String comands = scanner.nextLine();
 
-            switch (comands){
+            switch (comands) {
                 case EXIT:
                     isRun = false;
                     break;
@@ -68,35 +68,36 @@ public class MedCenterMain implements Comands {
         System.out.println("Please input doctorid");
         String doctorid = scanner.nextLine();
         Doctor doctorById = personStorage.getDoctorByID(doctorid);
-        if (doctorById != null){
+        if (doctorById != null) {
             System.out.println("Plise input id, name, surname,phoneNumber,date(14/02/2023 12:10)");
             String patientDataStr = scanner.nextLine();
-            String [] patientData  = patientDataStr.split(",");
+            String[] patientData = patientDataStr.split(",");
             Date registerDateTime = DateUtil.stringToDate(patientData[4]);
-            if (personStorage.patientEcuals(registerDateTime) == null){
-                Patient patient = new Patient(patientData[0],patientData[1],patientData[2],patientData[3],doctorById,registerDateTime);
+            if (personStorage.patientEcuals(registerDateTime) == null) {
+                Patient patient = new Patient(patientData[0], patientData[1], patientData[2], patientData[3], doctorById, registerDateTime);
                 personStorage.addPatient(patient);
                 System.out.println("your queue is registered");
-            }else {
+            } else {
                 addPatient();
+
             }
 
-        }else {
+        } else {
             System.out.println("there is no such doctor try again ");
         }
     }
 
-    private static void changeDoctorDataById(){
+    private static void changeDoctorDataById() {
         personStorage.printDoctor();
         System.out.println("Please input doctorid");
         String id = scanner.nextLine();
         Doctor doctor = personStorage.changeDoctor(id);
-        if (doctor == null){
+        if (doctor == null) {
             System.out.println("doctor with " + id + "  dois not exist ");
         }
         System.out.println("Plise input name, surname, email, phoneNumber, profession");
         String doctorDataStr = scanner.nextLine();
-        String [] doctorData  = doctorDataStr.split(",");
+        String[] doctorData = doctorDataStr.split(",");
         doctor.setName(doctorData[0]);
         doctor.setSurname(doctorData[1]);
         doctor.setEmail(doctorData[2]);
@@ -106,7 +107,7 @@ public class MedCenterMain implements Comands {
     }
 
 
-    private static void delleteDoctorById(){
+    private static void delleteDoctorById() {
         personStorage.printDoctor();
         System.out.println("Please input doctorid");
         String doctorId = scanner.nextLine();
@@ -130,14 +131,14 @@ public class MedCenterMain implements Comands {
     private static void addDoctor() {
         System.out.println("Plise input id, name, surname, email, phoneNumber, profession");
         String doctorDataStr = scanner.nextLine();
-        String [] doctorData  = doctorDataStr.split(",");
+        String[] doctorData = doctorDataStr.split(",");
         String doctorId = doctorData[0];
         Doctor doctorById = personStorage.getDoctorByID(doctorId);
-        if (doctorById == null){
-            Doctor doctor = new Doctor(doctorId,doctorData[1],doctorData[2],doctorData[3],doctorData[4],doctorData[5]);
+        if (doctorById == null) {
+            Doctor doctor = new Doctor(doctorId, doctorData[1], doctorData[2], doctorData[3], doctorData[4], doctorData[5]);
             personStorage.addDoctor(doctor);
             System.out.println("Doctor was added!");
-        }else {
+        } else {
             System.out.println("Doctor with " + doctorId + " already exists");
         }
     }
