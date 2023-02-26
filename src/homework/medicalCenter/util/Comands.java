@@ -20,4 +20,17 @@ public interface Comands {
         System.out.println("Please input " + PRINT_ALL_PATIENTS_BY_DOCTOR + " for print all  patients by doctor ");
         System.out.println("Please input " + PRINT_TODEYS_PATIENTS + " for print todays patients ");
     }
+
+    String FAMILY_PHYSICIANS = "1";
+    String INTERNISTS = "2";
+    String EMERGENCY_PHYSICIANS = "3";
+    String PSYCHIATRISTS = "4";
+
+    static void printComanandsProfesion(){
+        System.out.println("Please input " + FAMILY_PHYSICIANS + " to choose a profession FAMILY_PHYSICIANS");
+        System.out.println("Please input " + INTERNISTS + " to choose a profession INTERNISTS ");
+        System.out.println("Please input " + EMERGENCY_PHYSICIANS + " to choose a profession EMERGENCY_PHYSICIANS");
+        System.out.println("Please input " + PSYCHIATRISTS + " to choose a profession PSYCHIATRISTS");
+    }
+
 }

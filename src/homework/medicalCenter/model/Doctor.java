@@ -4,14 +4,14 @@ import java.util.Objects;
 
 public class Doctor extends Person {
     String email;
-    String profession;
+    Enum profesion;
 
     public Doctor() {
     }
 
-    public Doctor(String id, String name, String surname, String email, String phoneNumber, String profession ) {
+    public Doctor(String id, String name, String surname, String email, String phoneNumber, Enum profession ) {
         this.email = email;
-        this.profession = profession;
+        this.profesion = profession;
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -26,12 +26,12 @@ public class Doctor extends Person {
         this.email = email;
     }
 
-    public String getProfession() {
-        return profession;
+    public Enum getProfession() {
+        return profesion;
     }
 
-    public void setProfession(String profession) {
-        this.profession = profession;
+    public void setProfession(Enum profession) {
+        this.profesion = profession;
     }
 
     public String getId() {
@@ -72,24 +72,20 @@ public class Doctor extends Person {
         if (o == null || getClass() != o.getClass()) return false;
         Doctor doctor = (Doctor) o;
         return Objects.equals(email, doctor.email) &&
-                Objects.equals(profession, doctor.profession);
+                Objects.equals(profesion, doctor.profesion);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(email, profession);
+        return Objects.hash(email, profesion);
     }
 
     @Override
     public String toString() {
         return "Doctor{" +
                 "email='" + email + '\'' +
-                ", profession='" + profession + '\'' +
-                ", id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                '}';
+                ", profession='" + profesion + '\'' +
+                "} " + super.toString();
     }
 }

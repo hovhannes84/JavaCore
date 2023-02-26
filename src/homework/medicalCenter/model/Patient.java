@@ -90,11 +90,7 @@ public class Patient extends Person{
     public String toString() {
         return "Patient{" +
                 "doctor=" + doctor +
-                ", id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", registerDateTime=" + DateUtil.dateToString(registerDateTime) +
-                '}';
+                ", registerDateTime=" + registerDateTime +
+                "} " + super.toString();
     }
 }
