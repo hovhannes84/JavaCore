@@ -18,5 +18,6 @@ public class Array {
         month_days[11] = 31;
         System.out.println("В апреле " + month_days[3] + " дней.");
 
+
     }
 }
