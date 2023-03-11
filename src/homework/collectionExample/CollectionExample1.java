@@ -27,13 +27,13 @@ public class CollectionExample1 {
                         isRun = false;
                         break;
                     case "1":
-                        one();
+                        checkName();
                         break;
                     case "2":
-                        two();
+                        deleteName();
                         break;
                     case "3":
-                        three();
+                        nameToDesiredIndex();
                         break;
                 }
 
@@ -46,7 +46,7 @@ public class CollectionExample1 {
 
     }
 
-    private static void three() {
+    private static void nameToDesiredIndex() {
         System.out.println("Enter your name,index");
         String cons = scanner.nextLine();
         String[] str = cons.split(",");
@@ -58,7 +58,7 @@ public class CollectionExample1 {
 
     }
 
-    private static void two() {
+    private static void deleteName() {
         System.out.println("Enter your name:");
         String cons = scanner.nextLine();
         if (nameList.contains(cons)) {
@@ -75,7 +75,7 @@ public class CollectionExample1 {
 
     }
 
-    private static void one() {
+    private static void checkName() {
         System.out.println("Enter your name:");
         String cons = scanner.nextLine();
 

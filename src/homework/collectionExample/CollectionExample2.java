@@ -22,10 +22,10 @@ public class CollectionExample2 {
                         isRun = false;
                         break;
                     case "1":
-                        one();
+                        withoutRepetition();
                         break;
                     case "2":
-                        two();
+                        sortNames();
                         break;
                 }
             }catch (Exception e){
@@ -37,7 +37,7 @@ public class CollectionExample2 {
 
     }
 
-    private static void two() {
+    private static void sortNames() {
         System.out.println("enter 10 yin to get sorted list of names");
         for (int i = 0; i <10 ; i++) {
             System.out.println("please Enter name "+ (i+1) +" to save");
@@ -51,7 +51,7 @@ public class CollectionExample2 {
 
     }
 
-    private static void one() {
+    private static void withoutRepetition() {
         for (int i = 0; i <5 ; i++) {
             System.out.println("piease enter june "  + (i+1) + " st from pita");
             String name = scanner.nextLine();
