@@ -35,9 +35,6 @@ public class CollectionExample2 {
 
         }
 
-
-
-
     }
 
     private static void two() {
