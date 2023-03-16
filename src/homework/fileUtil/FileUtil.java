@@ -102,7 +102,6 @@ public class FileUtil {
         int size = getFolderSize(folder);
         System.out.println("summing file sizes" + size);
 
-
     }
 
     private static int getFolderSize(File file) {
