@@ -90,7 +90,6 @@ public class FileUtil {
         }catch (Exception e){
             System.out.println("wrong address entered");
         }
-
     }
 
     //այս մեթոդը պետք է սքաններով վերցնի մեկ string.
