@@ -69,6 +69,7 @@ public class FileUtil {
 
     }
 
+
     //այս մեթոդը պետք է սքաններով վերցնի երկու string.
     // 1 - txtPath txt ֆայլի փաթը
     // 2 - keyword - ինչ որ բառ
@@ -149,6 +150,9 @@ public class FileUtil {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
+
 
 
     }
